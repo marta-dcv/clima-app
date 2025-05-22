@@ -1,0 +1,3 @@
+python recolector.py - Este script corre indefinidamente, haciendo la consulta cada 3600 segundos (1 hora)
+
+streamlit run clima_app.py - Inicia la app web que puedes abrir en tu navegador para ver el historial y gráficos
