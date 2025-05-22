@@ -10,7 +10,11 @@ CIUDAD = os.getenv("CIUDAD", "Vigo")
 
 st.title("🌤️ App del Clima con DuckDB")
 
-conn = duckdb.connect('clima.duckdb')
+# Ruta absoluta a la base de datos
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_PATH = os.path.join(BASE_DIR, 'clima.duckdb')
+
+conn = duckdb.connect(DB_PATH)
 
 df = conn.execute("SELECT * FROM clima ORDER BY fecha DESC").fetchdf()
 

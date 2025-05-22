@@ -12,8 +12,12 @@ API_KEY = os.getenv("API_KEY")
 CIUDAD = os.getenv("CIUDAD", "Vigo")
 UNIDADES = os.getenv("UNIDADES", "metric")
 
-# Conectar a archivo DuckDB local
-conn = duckdb.connect('clima.duckdb')
+# Obtener ruta absoluta del archivo actual
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_PATH = os.path.join(BASE_DIR, 'clima.duckdb')
+
+# Conectar a archivo DuckDB local con ruta absoluta
+conn = duckdb.connect(DB_PATH)
 
 # Crear tabla si no existe
 conn.execute("""
