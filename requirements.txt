@@ -1,6 +1,5 @@
-streamlit
 duckdb
 requests
 python-dotenv
 matplotlib
-pandas
+streamlit
