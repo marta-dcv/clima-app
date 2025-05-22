@@ -13,3 +13,6 @@ __pycache__/
 # Entorno virtual (si tienes uno)
 venv/
 env/
+
+
+lanzar_clima.bat
